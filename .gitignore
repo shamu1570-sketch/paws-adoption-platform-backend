@@ -1,0 +1,67 @@
+# ==============================
+# Entorno virtual
+# ==============================
+.venv/
+venv/
+env/
+
+# ==============================
+# Variables de entorno
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==============================
+# Tests / Coverage
+# ==============================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ==============================
+# Type checkers
+# ==============================
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# ==============================
+# IDE / Editores
+# ==============================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+.idea/
+*.iml
+
+# ==============================
+# Sistema operativo
+# ==============================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==============================
+# Logs
+# ==============================
+*.log
+
+# ==============================
+# Archivos temporales
+# ==============================
+*.tmp
+*.temp
+*.swp
+*.swo
