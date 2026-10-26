@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${subject}</title>
+  </head>
+  <body style="margin:0;padding:0;background-color:#F8FAFC;font-family:'Outfit','Inter',Arial,Helvetica,sans-serif;color:#1E293B;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F8FAFC;padding:32px 16px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background-color:#FFFFFF;border-radius:24px;border:1px solid #F1F5F9;overflow:hidden;">
+            <tr>
+              <td style="background-color:#DE2E03;padding:24px 32px;">
+                <span style="font-size:22px;font-weight:800;color:#FFFFFF;">&#128062; ${app_name}</span>
+                <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FFE4DC;margin-top:4px;">Panel de Administración</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:32px;">
+                <h1 style="margin:0 0 12px;font-size:20px;font-weight:800;color:#0F172A;">Te invitamos a unirte como ${role_label}</h1>
+                <p style="margin:0 0 20px;font-size:14px;line-height:1.6;color:#475569;">
+                  Hola, <strong style="color:#0F172A;">${invited_by}</strong> te invitó a formar parte del equipo de ${app_name} como
+                  <strong style="color:#0F172A;">${role_label}</strong>. Con tu cuenta podrás gestionar mascotas, solicitudes y mensajes de
+                  <strong style="color:#0F172A;">${scope_label}</strong>.
+                </p>
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#FFF7ED;border:1px solid #FED7AA;border-radius:16px;">
+                  <tr>
+                    <td align="center" style="padding:20px;">
+                      <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#85564C;">Tu llave de registro</div>
+                      <div style="font-size:18px;font-weight:800;letter-spacing:1px;color:#DE2E03;margin-top:8px;font-family:'Courier New',Courier,monospace;word-break:break-all;">${access_key}</div>
+                    </td>
+                  </tr>
+                </table>
+
+                <h2 style="margin:24px 0 8px;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#0F172A;">Cómo registrarte</h2>
+                <ol style="margin:0;padding-left:20px;font-size:14px;line-height:1.6;color:#475569;">
+                  <li style="margin:0 0 6px;">Abre la pantalla de registro con el botón de abajo.</li>
+                  <li style="margin:0 0 6px;">Pega la llave, escribe tu nombre y usa este mismo correo: <strong style="color:#0F172A;">${email}</strong>.</li>
+                  <li style="margin:0 0 6px;">Elige tu contraseña y crea tu cuenta.</li>
+                </ol>
+
+                <table role="presentation" cellpadding="0" cellspacing="0" align="center" style="margin-top:24px;">
+                  <tr>
+                    <td style="background-color:#DE2E03;border-radius:12px;">
+                      <a href="${registration_url}" style="display:inline-block;padding:14px 28px;font-size:13px;font-weight:700;color:#FFFFFF;text-decoration:none;">Ir al registro de administradores</a>
+                    </td>
+                  </tr>
+                </table>
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:28px;background-color:#FEF2F2;border-left:4px solid #E11D48;border-radius:12px;">
+                  <tr>
+                    <td style="padding:14px 18px;font-size:13px;line-height:1.6;color:#475569;">
+                      <div style="font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#E11D48;margin-bottom:6px;">Importante</div>
+                      &#8226; La llave es de <strong>un solo uso</strong> y solo funciona con el correo <strong>${email}</strong>.<br />
+                      &#8226; Vence el <strong>${expires}</strong>.<br />
+                      &#8226; No la compartas con nadie. Si no esperabas esta invitación, ignora este correo.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#F2F2F2;padding:16px 32px;font-size:11px;color:#85564C;text-align:center;">
+                ${app_name} · Este es un mensaje automático, por favor no respondas a este correo.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
