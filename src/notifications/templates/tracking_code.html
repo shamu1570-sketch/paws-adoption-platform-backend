@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${subject}</title>
+  </head>
+  <body style="margin:0;padding:0;background-color:#F8FAFC;font-family:'Outfit','Inter',Arial,Helvetica,sans-serif;color:#1E293B;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F8FAFC;padding:32px 16px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background-color:#FFFFFF;border-radius:24px;border:1px solid #F1F5F9;overflow:hidden;">
+            <tr>
+              <td style="background-color:#DE2E03;padding:24px 32px;">
+                <span style="font-size:22px;font-weight:800;color:#FFFFFF;">&#128062; ${app_name}</span>
+                <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FFE4DC;margin-top:4px;">Adopciones &amp; Refugios</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:32px;">
+                <h1 style="margin:0 0 12px;font-size:20px;font-weight:800;color:#0F172A;">${headline}</h1>
+                <p style="margin:0 0 20px;font-size:14px;line-height:1.6;color:#475569;">Hola ${recipient_name}, ${intro}</p>
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#FFF7ED;border:1px solid #FED7AA;border-radius:16px;">
+                  <tr>
+                    <td align="center" style="padding:20px;">
+                      <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#85564C;">Tu código de seguimiento</div>
+                      <div style="font-size:26px;font-weight:800;letter-spacing:2px;color:#DE2E03;margin-top:8px;font-family:'Courier New',Courier,monospace;">${tracking_code}</div>
+                    </td>
+                  </tr>
+                </table>
+
+                <h2 style="margin:24px 0 8px;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#0F172A;">Resumen de tu solicitud</h2>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #F1F5F9;border-radius:12px;font-size:13px;">
+${details_rows}                </table>
+
+                <p style="margin:24px 0 20px;font-size:14px;line-height:1.6;color:#475569;">Con este código puedes consultar el estado en cualquier momento, sin crear una cuenta.</p>
+
+                <table role="presentation" cellpadding="0" cellspacing="0" align="center">
+                  <tr>
+                    <td style="background-color:#DE2E03;border-radius:12px;">
+                      <a href="${tracking_url}" style="display:inline-block;padding:14px 28px;font-size:13px;font-weight:700;color:#FFFFFF;text-decoration:none;">Consultar el estado</a>
+                    </td>
+                  </tr>
+                </table>
+
+                <p style="margin:24px 0 0;font-size:12px;line-height:1.6;color:#94A3B8;">Guarda este correo: el código es personal. Si no realizaste esta solicitud, puedes ignorar este mensaje.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#F2F2F2;padding:16px 32px;font-size:11px;color:#85564C;text-align:center;">
+                ${app_name} · Este es un mensaje automático, por favor no respondas a este correo.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

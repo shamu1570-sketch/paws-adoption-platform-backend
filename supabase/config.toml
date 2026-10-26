@@ -1,0 +1,43 @@
+# Entorno local de Supabase en contenedores Docker (Supabase CLI).
+#   supabase start    -> levanta PostgreSQL, Auth (GoTrue), PostgREST, Storage y Studio
+#   supabase status   -> muestra las URLs y llaves locales para el .env
+#   supabase stop     -> detiene los contenedores
+# Requiere Docker Desktop y la Supabase CLI. Referencia: https://supabase.com/docs/guides/cli/config
+
+project_id = "paws-adoption-platform"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+max_rows = 1000
+
+[db]
+port = 54322
+# Misma versión mayor que el proyecto en Supabase cloud.
+major_version = 17
+
+[db.migrations]
+enabled = true
+
+[studio]
+enabled = true
+port = 54323
+
+[storage]
+enabled = true
+file_size_limit = "5MiB"
+
+# Bucket público de fotografías de mascotas. El backend sube con la service role key
+# y la base de datos solo guarda la URL pública.
+[storage.buckets.pet-photos]
+public = true
+file_size_limit = "5MiB"
+allowed_mime_types = ["image/jpeg", "image/png", "image/webp"]
+
+[auth]
+# La autenticación de administradores la resuelve FastAPI (tabla admins + JWT propio),
+# por eso el registro público de GoTrue queda deshabilitado.
+enabled = true
+site_url = "http://localhost:3000"
+enable_signup = false

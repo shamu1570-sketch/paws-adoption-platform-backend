@@ -3,25 +3,52 @@ name = "paws-adoption-platform-backend"
 version = "0.1.0"
 requires-python = ">=3.13,<3.14"
 dependencies = [
-    "fastapi[standard]>=0.141.1",
     "alembic==1.16.4",
     "asyncpg==0.30.0",
     "bcrypt==4.0.1",
     "email-validator==2.2.0",
     "fastapi==0.116.1",
+    "httpx>=0.28.1",
     "passlib[bcrypt]==1.7.4",
+    "pillow>=13.0.0",
     "pydantic==2.11.7",
     "pydantic-settings==2.10.1",
     "pyjwt==2.10.1",
+    "python-multipart>=0.0.32",
     "sqlalchemy==2.0.43",
     "uvicorn[standard]==0.35.0",
 ]
 [dependency-groups]
 dev = [
+    "aiosqlite>=0.22.1",
     "httpx>=0.28.1",
     "pytest>=9.1.1",
     "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
     "ruff>=0.16.1",
 ]
 [tool.fastapi] 
 entrypoint = "src.main:app"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["test"]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+# SQLAlchemy async ejecuta el código en greenlets; sin esto la cobertura se subestima.
+concurrency = ["greenlet", "thread"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "C90", "PL", "RUF"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.per-file-ignores]
+# En las pruebas los valores esperados se escriben literales.
+"test/*" = ["PLR2004"]
