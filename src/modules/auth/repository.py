@@ -7,7 +7,7 @@ from src.modules.auth.interfaces import InvitationGrant
 from src.modules.auth.model import Admin, AdminInvitation
 from src.modules.auth.schemas import AdminFilters
 
-
+ 
 class AdminRepository(BaseRepository[Admin]):
     model = Admin
 
